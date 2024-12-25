@@ -1,12 +1,17 @@
 
 "use client"
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button } from "@/components/ui/button"
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
+import { MdDoubleArrow } from "react-icons/md";
+import { useRouter } from 'next/navigation';
+
+
+
 
 
 
@@ -36,23 +41,33 @@ const SwierData = [
 
 export default function Home() {
   const MySwipe = useRef()
-
-
+  const [isLastSlide, setIsLastSlide] = useState(false);
+  const router = useRouter()
 
   // for handleClick Swiper Button Manual
   const handleClick = () => {
-    MySwipe.current?.slideNext();
+
+    if(!isLastSlide){
+
+      MySwipe.current?.slideNext();
+    }
+    else{
+router.push("/YouDidGreat")
+    }
   }
 
   return (
     <>
       <Swiper
+      onSlideChange={(swiper)=>{
+       setIsLastSlide(swiper.activeIndex == SwierData.length - 1)
+      }}
         onSwiper={(swipe) => {
           MySwipe.current = swipe;
-
         }}
         modules={[Navigation]}
-      
+      allowTouchMove={false}
+
       >
 
         {
@@ -79,15 +94,16 @@ export default function Home() {
               </div>
 
               {/* YE APNA BTN   */}
-
               <div className="absolute top-0 flex justify-between items-center w-full flex-col h-full py-10 pt-8">
                 <div >
                   <h1 className='text-3xl font-bold'>Imaginarium</h1>
                   <h1 className='text-xl  text-center'>Sub Title</h1>
                 </div>
 
+                <div className='relative myBtn '>
 
-                <Button variant="outline" onClick={handleClick} >Button</Button>
+                  <Button variant="outline" onClick={handleClick} className="bg-black  text-white  hover:bg-transparent   h-[40px] py-2 px-8 btn " >Next <MdDoubleArrow /></Button>
+                </div>
               </div>
 
             </SwiperSlide>
