@@ -1,0 +1,31 @@
+ [
+    {
+      "Image1": "/SlideImg/bird.jpg",
+      "Image2": "/SlideImg/plane.jpg",
+      "firstHeading":"Bird",
+      "SecoundHeading":"Flying plane"
+  
+    },
+  
+    {
+      "Image1": "/SlideImg/blueWhale.jpg",
+      "Image2": "/SlideImg/sumrin.webp",
+      "firstHeading":"Whale ",
+      "SecoundHeading":"Submarine"
+  
+    },
+  
+    {
+      "Image1": "/SlideImg/termite.jpg",
+      "Image2": "/SlideImg/termite2.jpg",
+      "firstHeading":"Termite mound",
+      "SecoundHeading":"Building"
+  
+    }, {
+      "Image1": "/SlideImg/mosquito.jpg",
+      "Image2": "/SlideImg/closeup-syringe.jpg",
+      "firstHeading":"Mosquito",
+      "SecoundHeading":"Syringe needle"
+  
+    }
+  ]
