@@ -17,7 +17,6 @@ import swiperData from "@/lib/data.json"
 
 
 
-
 export default function Home() {
   const MySwipe = useRef()
   const [isLastSlide, setIsLastSlide] = useState(false);
@@ -63,7 +62,11 @@ router.push("/YouDidGreat")
                 <div className='bg-[#79DAFF] h-full w-full flex items-center justify-center'>
                   <div className=' imageFirst w-[500px] h-[400px] relative rounded-2xl overflow-hidden shadow-md shadow-black'>
                     <Image src={item.Image1} layout='fill' objectFit='cover' alt='image' />
+<<<<<<< HEAD
                     <h1 className='absolute bottom-0 text-center w-full py-2 bg-white text-3xl  text-black '>{item.firstHeading}</h1>
+=======
+                    <h1 className='absolute bottom-0 text-center w-full py-2 bg-white text-3xl  text-black '>{item.SecoundHeading}</h1>
+>>>>>>> bcf5fba36e8d43f911c4df03c3ed0755b0fe1326
                   </div>
                  
                 </div>
@@ -79,8 +82,17 @@ router.push("/YouDidGreat")
               </div>
 
               {/* YE APNA BTN   */}
+<<<<<<< HEAD
               <div className="absolute bottom-0 right-[45%] text-center pb-8">
                
+=======
+              <div className="absolute top-0 flex justify-between items-center w-full flex-col h-full py-10 pt-8">
+                <div >
+                  <h1 className='text-3xl font-bold'>Design
+Look at the pictures.</h1>
+
+                </div>
+>>>>>>> bcf5fba36e8d43f911c4df03c3ed0755b0fe1326
 
                 <div className='relative myBtn '>
 
